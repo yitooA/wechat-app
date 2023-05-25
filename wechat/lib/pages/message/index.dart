@@ -1,4 +1,4 @@
-library welcome;
+library message;
 
 export './state.dart';
 export './controller.dart';

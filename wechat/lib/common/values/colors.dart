@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 class AppColors {
-  /// 主背景 白色
+  /// background white color
   static const Color primaryBackground = Color.fromARGB(255, 255, 255, 255);
   /// 主背景 灰色
   static const Color primarySecondaryBackground = Color.fromARGB(255, 247, 247, 249);
@@ -59,5 +59,42 @@ class AppColors {
   static const Color morenbg = Color.fromARGB(255, 250, 250, 250);
 
   //背景颜色
+
+  /// WeChat primary background color (white)
+  static const Color weChatPrimaryBackground = Color.fromARGB(255, 255, 255, 255);
+
+  /// WeChat primary text color (black)
+  static const Color weChatPrimaryText = Color.fromARGB(255, 0, 0, 0);
+
+  /// WeChat primary element color (green)
+  static const Color weChatPrimaryElement = Color.fromARGB(255, 0, 204, 153);
+
+  /// WeChat text color for primary elements (white)
+  static const Color weChatPrimaryElementText = Color.fromARGB(255, 255, 255, 255);
+
+  /// WeChat secondary element color (light gray)
+  static const Color weChatSecondaryElement = Color.fromARGB(255, 242, 242, 242);
+
+  /// WeChat text color for secondary elements (light blue)
+  static const Color weChatSecondaryElementText = Color.fromARGB(255, 0, 153, 255);
+
+  /// WeChat tertiary element color (dark gray)
+  static const Color weChatTertiaryElement = Color.fromARGB(255, 45, 45, 47);
+
+  /// WeChat text color for tertiary elements (gray)
+  static const Color weChatTertiaryElementText = Color.fromARGB(255, 153, 153, 153);
+
+  /// WeChat tab bar element color (gray)
+  static const Color weChatTabBarElement = Color.fromARGB(255, 217, 217, 217);
+
+  /// WeChat color for tab cell separators (light gray)
+  static const Color weChatTabCellSeparator = Color.fromARGB(255, 230, 230, 231);
+
+  /// WeChat chat background color (light gray)
+  static const Color weChatChatBackground = Color.fromARGB(255, 244, 244, 244);
+
+  /// WeChat default background color (off-white)
+  static const Color weChatDefaultBackground = Color.fromARGB(255, 250, 250, 250);
+
 
 }

@@ -4,9 +4,9 @@ import 'package:chatty/common/store/store.dart';
 
 import 'package:get/get.dart';
 
-/// 检查是否登录
+/// check if the user logged in or not
 class RouteAuthMiddleware extends GetMiddleware {
-  // priority 数字小优先级高
+  // priority smaller the better
   @override
   int? priority = 0;
 
