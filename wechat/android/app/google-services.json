@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "751275720761",
+    "project_id": "wechat-chat-app",
+    "storage_bucket": "wechat-chat-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751275720761:android:d79ba0685cdfa0c01fcde8",
+        "android_client_info": {
+          "package_name": "com.wechat.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "751275720761-qi1l9jkjab384t1k6gag2o3mfdp1id66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwKLHNBlCo1bBYFMBSNdtNcdczo7g5Pic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "751275720761-noi8he3caacdlkoqslb7mbnau3jndlkt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "751275720761-jor0cee1od8hmlpjul8e7qru8nqi22is.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dbestech.chatty"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -110,7 +110,7 @@ class HttpUtil {
         EasyLoading.showError(eInfo.message);
         break;
       default:
-        EasyLoading.showError('未知错误');
+        EasyLoading.showError('Uknown Error');
         break;
     }
   }
@@ -237,7 +237,7 @@ class HttpUtil {
     return response.data;
   }
 
-  /// restful post 操作
+  /// restful post operation
   Future post(
     String path, {
     dynamic data,

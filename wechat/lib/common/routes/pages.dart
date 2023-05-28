@@ -1,14 +1,13 @@
-
-import 'package:chatty/pages/frame/welcome/index.dart';
-import 'package:chatty/pages/message/bindings.dart';
-import 'package:chatty/pages/message/view.dart';
 import 'package:flutter/material.dart';
 import 'package:chatty/common/middlewares/middlewares.dart';
 
 import 'package:get/get.dart';
 
-import '../../pages/frame/sign_in/bindings.dart';
-import '../../pages/frame/sign_in/view.dart';
+import 'package:chatty/pages/frame/welcome/index.dart';
+import '../../pages/frame/sign_in/index.dart';
+import '../../pages/message/index.dart';
+import '../../pages/profile/index.dart';
+import '../../pages/contact/index.dart';
 import 'routes.dart';
 
 class AppPages {
@@ -46,17 +45,18 @@ class AppPages {
     GetPage(name: AppRoutes.Forgot, page: () => ForgotPage(), binding: ForgotBinding()),
     GetPage(name: AppRoutes.Phone, page: () => PhonePage(), binding: PhoneBinding()),
     GetPage(name: AppRoutes.SendCode, page: () => SendCodePage(), binding: SendCodeBinding()),
-    // 首页
-    GetPage(name: AppRoutes.Contact, page: () => ContactPage(), binding: ContactBinding()),
-    //消息
     */
-    GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding(),middlewares: [
+    // 首页
+    GetPage(name: AppRoutes.Contact, page: () => const ContactPage(), binding: ContactBinding()),
+    //消息
+
+    GetPage(name: AppRoutes.Message, page: () => const MessagePage(), binding: MessageBinding(),middlewares: [
        RouteAuthMiddleware(priority: 1),
      ],),
-    //我的
+    //Profile Section
+    GetPage(name: AppRoutes.Profile, page: () => const ProfilePage(), binding: ProfileBinding()),
   /*
-    GetPage(name: AppRoutes.Profile, page: () => ProfilePage(), binding: ProfileBinding()),
-    //聊天详情
+  //聊天详情
     GetPage(name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
 
     GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),

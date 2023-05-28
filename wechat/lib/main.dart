@@ -1,6 +1,8 @@
 import 'package:chatty/common/store/store.dart';
+import 'package:chatty/common/style/style.dart';
 import 'package:chatty/global.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -23,9 +25,8 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      builder: EasyLoading.init(),
+      theme: AppTheme.light,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
     )
