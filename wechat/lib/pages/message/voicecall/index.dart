@@ -1,4 +1,4 @@
-library chat;
+library voicecall;
 
 export './state.dart';
 export './controller.dart';
