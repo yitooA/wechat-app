@@ -1,4 +1,4 @@
-import 'package:chatty/common/entities/entities.dart';
+import 'package:wechat/common/entities/entities.dart';
 //https://github.com/HeySreelal/countrycodes
 class Countries {
   static List<Country> get list => _list;

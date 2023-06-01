@@ -1,6 +1,6 @@
-import 'package:chatty/common/values/colors.dart';
-import 'package:chatty/pages/contact/controller.dart';
-import 'package:chatty/pages/contact/widgets/contact_list.dart';
+import 'package:wechat/common/values/colors.dart';
+import 'package:wechat/pages/contact/controller.dart';
+import 'package:wechat/pages/contact/widgets/contact_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

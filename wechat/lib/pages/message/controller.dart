@@ -1,5 +1,5 @@
-import 'package:chatty/common/routes/names.dart';
-import 'package:chatty/pages/message/state.dart';
+import 'package:wechat/common/routes/names.dart';
+import 'package:wechat/pages/message/state.dart';
 import 'package:get/get.dart';
 
 class MessageController extends GetxController{

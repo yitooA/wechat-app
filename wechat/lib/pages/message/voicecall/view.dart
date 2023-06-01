@@ -1,5 +1,5 @@
-import 'package:chatty/common/style/color.dart';
-import 'package:chatty/common/values/colors.dart';
+import 'package:wechat/common/style/color.dart';
+import 'package:wechat/common/values/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -103,6 +103,9 @@ class VoiceCallPage extends GetView<VoiceCallController> {
                           children: [
                             //microphone section
                             GestureDetector(
+                              onTap: controller.state.isJoined.value
+                                    ?controller.leaveChannel
+                                    :controller.joinChannel,
                               child: Container(
                                   padding: EdgeInsets.all(15.w),
                                   width: 60.w,

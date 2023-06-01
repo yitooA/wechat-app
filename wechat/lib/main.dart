@@ -1,6 +1,6 @@
-import 'package:chatty/common/store/store.dart';
-import 'package:chatty/common/style/style.dart';
-import 'package:chatty/global.dart';
+import 'package:wechat/common/store/store.dart';
+import 'package:wechat/common/style/style.dart';
+import 'package:wechat/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

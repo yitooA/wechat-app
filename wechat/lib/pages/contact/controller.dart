@@ -1,7 +1,7 @@
-import 'package:chatty/common/apis/apis.dart';
-import 'package:chatty/common/entities/entities.dart';
-import 'package:chatty/common/store/store.dart';
-import 'package:chatty/pages/contact/state.dart';
+import 'package:wechat/common/apis/apis.dart';
+import 'package:wechat/common/entities/entities.dart';
+import 'package:wechat/common/store/store.dart';
+import 'package:wechat/pages/contact/state.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -67,7 +67,7 @@ class ContactController extends GetxController{
         }
       );
     } else {
-      if(from_messages.docs.first.id.isNotEmpty) {
+      if(from_messages.docs.isNotEmpty) {
         Get.toNamed(
             '/chat',
             parameters: {
@@ -80,7 +80,7 @@ class ContactController extends GetxController{
         );
       }
 
-      if(to_messages.docs.first.id.isNotEmpty) {
+      if(to_messages.docs.isNotEmpty) {
         Get.toNamed(
             '/chat',
             parameters: {

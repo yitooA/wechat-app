@@ -1,4 +1,4 @@
-import 'package:chatty/pages/message/chat/controller.dart';
+import 'package:wechat/pages/message/chat/controller.dart';
 import 'package:get/get.dart';
 
 class ChatBinding implements Bindings{

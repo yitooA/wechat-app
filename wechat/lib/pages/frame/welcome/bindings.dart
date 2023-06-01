@@ -1,4 +1,4 @@
-import 'package:chatty/pages/frame/welcome/controller.dart';
+import 'package:wechat/pages/frame/welcome/controller.dart';
 import 'package:get/get.dart';
 
 class WelcomeBinding implements Bindings{

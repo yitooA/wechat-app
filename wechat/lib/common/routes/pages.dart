@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:chatty/common/middlewares/middlewares.dart';
+import 'package:wechat/common/middlewares/middlewares.dart';
 
 import 'package:get/get.dart';
 
-import 'package:chatty/pages/frame/welcome/index.dart';
+import 'package:wechat/pages/frame/welcome/index.dart';
 import '../../pages/frame/sign_in/index.dart';
 import '../../pages/message/index.dart';
 import '../../pages/profile/index.dart';

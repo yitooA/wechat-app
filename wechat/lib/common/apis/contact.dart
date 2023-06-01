@@ -1,5 +1,5 @@
-import 'package:chatty/common/entities/entities.dart';
-import 'package:chatty/common/utils/utils.dart';
+import 'package:wechat/common/entities/entities.dart';
+import 'package:wechat/common/utils/utils.dart';
 
 class ContactAPI {
   /// 翻页

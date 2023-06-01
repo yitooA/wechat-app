@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:chatty/common/entities/entities.dart';
-import 'package:chatty/common/utils/utils.dart';
-import 'package:chatty/common/values/values.dart';
+import 'package:wechat/common/entities/entities.dart';
+import 'package:wechat/common/utils/utils.dart';
+import 'package:wechat/common/values/values.dart';
 
 class ChatAPI {
 

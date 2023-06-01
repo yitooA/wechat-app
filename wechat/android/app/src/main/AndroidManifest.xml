@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.Internet"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
    <application
-        android:label="chatty"
+        android:label="wechat"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

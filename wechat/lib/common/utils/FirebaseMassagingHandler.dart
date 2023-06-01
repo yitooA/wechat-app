@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:ui';
-import 'package:chatty/common/apis/apis.dart';
-import 'package:chatty/common/entities/entities.dart';
-import 'package:chatty/common/routes/names.dart';
-import 'package:chatty/common/store/store.dart';
-import 'package:chatty/common/values/values.dart';
+import 'package:wechat/common/apis/apis.dart';
+import 'package:wechat/common/entities/entities.dart';
+import 'package:wechat/common/routes/names.dart';
+import 'package:wechat/common/store/store.dart';
+import 'package:wechat/common/values/values.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -20,7 +20,7 @@ class FirebaseMassagingHandler {
   FirebaseMassagingHandler._();
   static AndroidNotificationChannel channel_call = const AndroidNotificationChannel(
     'com.wechat.chatapp.call', // id
-    'chatty_call', // title
+    'wechat_call', // title
     importance: Importance.max,
     enableLights: true,
     playSound: true,
@@ -28,7 +28,7 @@ class FirebaseMassagingHandler {
   );
   static AndroidNotificationChannel channel_message = const AndroidNotificationChannel(
     'com.wechat.chatapp.message', // id
-    'chatty_message', // title
+    'wechat_message', // title
     importance: Importance.defaultImportance,
     enableLights: true,
     playSound: true,

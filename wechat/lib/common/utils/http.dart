@@ -4,9 +4,9 @@ import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/adapter.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
-import 'package:chatty/common/store/store.dart';
-import 'package:chatty/common/utils/utils.dart';
-import 'package:chatty/common/values/values.dart';
+import 'package:wechat/common/store/store.dart';
+import 'package:wechat/common/utils/utils.dart';
+import 'package:wechat/common/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart' hide FormData;
@@ -31,7 +31,7 @@ class HttpUtil {
       connectTimeout: 10000,
 
       // 响应流上前后两次接受到数据的间隔，单位为毫秒。
-      receiveTimeout: 5000,
+      receiveTimeout: 50000,
 
       // Http请求头.
       headers: {},
