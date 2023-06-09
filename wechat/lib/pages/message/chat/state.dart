@@ -2,10 +2,12 @@ import 'package:wechat/common/entities/entities.dart';
 import 'package:get/get.dart';
 
 class ChatState{
-  RxList<Msgcontent> msgcontenetList = <Msgcontent>[].obs;
+  //for our data from firebase firestore
+  RxList<Msgcontent> msgcontentList = <Msgcontent>[].obs;
   var to_token = ''.obs;
   var to_name =''.obs;
   var to_avatar = ''.obs;
   var to_online = ''.obs;
   RxBool more_status = false.obs;
+  RxBool isLoading = false.obs;
 }

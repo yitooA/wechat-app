@@ -28,7 +28,7 @@ class HttpUtil {
 
       // baseUrl: storage.read(key: STORAGE_KEY_APIURL) ?? SERVICE_API_BASEURL,
       //连接服务器超时时间，单位是毫秒.
-      connectTimeout: 10000,
+      connectTimeout: 100000,
 
       // 响应流上前后两次接受到数据的间隔，单位为毫秒。
       receiveTimeout: 50000,

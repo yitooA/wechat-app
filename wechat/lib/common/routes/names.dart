@@ -8,6 +8,8 @@ class AppRoutes {
   static const SendCode = '/SendCode';
   static const NotFound = '/not_found';
 
+  //nearby
+  static const Nearby = '/nearby';
   //contact
   static const Contact = '/contact';
   // message

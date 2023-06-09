@@ -15,7 +15,7 @@ class WelcomePage extends GetView<WelcomeController> {
         title,
         textAlign: TextAlign.center,
         style: TextStyle(
-          color: AppColors.weChatPrimaryElementText,
+          color: AppColors.primaryElementText,
           fontFamily: "Montserrat",
           fontWeight: FontWeight.bold,
           fontSize: 45.sp,
@@ -27,7 +27,7 @@ class WelcomePage extends GetView<WelcomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.weChatPrimaryElement,
+      backgroundColor: AppColors.primaryElement,
       body: Container(
         width: 360.w,
         height: 780.h,

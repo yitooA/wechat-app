@@ -7,9 +7,11 @@ import 'package:wechat/pages/frame/welcome/index.dart';
 import '../../pages/frame/sign_in/index.dart';
 import '../../pages/message/index.dart';
 import '../../pages/profile/index.dart';
+import '../../pages/profile/nearby/index.dart';
 import '../../pages/contact/index.dart';
 import '../../pages/message/chat/index.dart';
 import '../../pages/message/voicecall/index.dart';
+import '../../pages/message/videocall/index.dart';
 import 'routes.dart';
 
 class AppPages {
@@ -59,11 +61,13 @@ class AppPages {
     GetPage(name: AppRoutes.Profile, page: () => const ProfilePage(), binding: ProfileBinding()),
 
   //Chat details
-    GetPage(name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
+    GetPage(name: AppRoutes.Chat, page: () => const ChatPage(), binding: ChatBinding()),
 /*
     GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),*/
-    GetPage(name: AppRoutes.VoiceCall, page: () => VoiceCallPage(), binding: VoiceCallBinding()),
-  /*  GetPage(name: AppRoutes.VideoCall, page: () => VideoCallPage(), binding: VideoCallBinding()),*/
+    GetPage(name: AppRoutes.VoiceCall, page: () => const VoiceCallPage(), binding: VoiceCallBinding()),
+    GetPage(name: AppRoutes.VideoCall, page: () => VideoCallPage(), binding: VideoCallBinding()),
+    GetPage(name: AppRoutes.Nearby, page: () => NearbyPage(), binding: NearbyBinding()),
+
   ];
 
 

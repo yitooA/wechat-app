@@ -12,7 +12,7 @@ class VoiceCallPage extends GetView<VoiceCallController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primary_bg,
+      backgroundColor: AppColors.primaryBackground,
       body: SafeArea(
         child: Obx(
           () => Container(

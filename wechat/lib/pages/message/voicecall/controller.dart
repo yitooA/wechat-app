@@ -91,7 +91,7 @@ Future<void> initEngine() async {
     var res = await ChatAPI.call_notifications(params: callRequestEntity);
     print("...the other user's tokenis ${state.to_token.value}");
 
-    if(res.data==0) {
+    if(res.code==0) {
       print('notification success');
     } else {
       print('could not send notification');
@@ -133,7 +133,7 @@ Future<void> initEngine() async {
     String token = await getToken();
 
     await engine.joinChannel(
-        token: '007eJxTYFjko9W/6qSoXxV7zxXd5g1PO3NXMnRxct46NfXbwb/rxZYoMCSZpRiam5oapCanmZmkGCVaGhsapxkbpqVZGBolpyYaK5hUpDQEMjJwzpnLwAiFID4fQ3lqckZiSWJBQVl+ZnIqAwMAqaYjWg==',
+        token: '007eJxTYCiqF27il1zepmt6fgWHUiD/61Kbd3lNsm++dRVentz69rACQ5JZiqG5qalBanKamUmKUaKlsaFxmrFhWpqFoVFyaqIxd1NdSkMgI4NWwG8GRigE8fkYylOTMxJLEgsKyvIzk1MZGABSPiLl',
         channelId: 'wechatappvoice',
         uid: 0,
         options: ChannelMediaOptions(

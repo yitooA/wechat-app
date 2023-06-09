@@ -15,9 +15,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class FirebaseMassagingHandler {
+import '../../firebase_options.dart';
 
-  FirebaseMassagingHandler._();
+class FirebaseMessagingHandler {
+
+  FirebaseMessagingHandler._();
   static AndroidNotificationChannel channel_call = const AndroidNotificationChannel(
     'com.wechat.chatapp.call', // id
     'wechat_call', // title
@@ -43,7 +45,7 @@ class FirebaseMassagingHandler {
   static Future<void> config() async {
     FirebaseMessaging messaging = FirebaseMessaging.instance;
     try {
-      RemoteMessage newMessage = RemoteMessage();
+      // RemoteMessage newMessage = RemoteMessage();
       await messaging.requestPermission(
         sound: true,
         badge: true,
@@ -95,6 +97,7 @@ class FirebaseMassagingHandler {
           var doc_id = data["doc_id"]??"";
           // var call_role= data["call_type"];
           if (to_token != null && to_name != null && to_avatar != null) {
+            //Shows notification tray
             Get.snackbar(
                 icon:Container(
                   width: 40.w,
@@ -118,7 +121,7 @@ class FirebaseMassagingHandler {
                       if(Get.isSnackbarOpen){
                         Get.closeAllSnackbars();
                       }
-                      FirebaseMassagingHandler._sendNotifications("cancel",to_token,to_avatar,to_name,doc_id);
+                      FirebaseMessagingHandler._sendNotifications("cancel",to_token,to_avatar,to_name,doc_id);
                     },
                     child: Container(
                       width: 40.w,
@@ -196,7 +199,7 @@ class FirebaseMassagingHandler {
                         if(Get.isSnackbarOpen){
                           Get.closeAllSnackbars();
                         }
-                        FirebaseMassagingHandler._sendNotifications("cancel",to_token,to_avatar,to_name,doc_id);
+                        FirebaseMessagingHandler._sendNotifications("cancel",to_token,to_avatar,to_name,doc_id);
                       },
                       child: Container(
                         width: 40.w,
@@ -240,7 +243,7 @@ class FirebaseMassagingHandler {
             }
 
         }else if(message.data["call_type"]=="cancel"){
-              FirebaseMassagingHandler.flutterLocalNotificationsPlugin.cancelAll();
+              FirebaseMessagingHandler.flutterLocalNotificationsPlugin.cancelAll();
 
               if(Get.isSnackbarOpen){
                 Get.closeAllSnackbars();
@@ -316,7 +319,7 @@ class FirebaseMassagingHandler {
     }
    // PlascoRequests().initReport();
   }
-/*
+
   @pragma('vm:entry-point')
   static Future<void> firebaseMessagingBackground(RemoteMessage message) async {
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
@@ -328,7 +331,7 @@ class FirebaseMassagingHandler {
       if(message.data!=null && message.data["call_type"]!=null) {
 
         if(message.data["call_type"]=="cancel"){
-            FirebaseMassagingHandler.flutterLocalNotificationsPlugin.cancelAll();
+            FirebaseMessagingHandler.flutterLocalNotificationsPlugin.cancelAll();
           //  await setCallVocieOrVideo(false);
             var _prefs = await SharedPreferences.getInstance();
             await _prefs.setString("CallVocieOrVideo", "");
@@ -355,6 +358,6 @@ class FirebaseMassagingHandler {
 
     }
 
-  }*/
+  }
 }
 

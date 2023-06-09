@@ -15,7 +15,7 @@ class SignInPage extends GetView<SignInController> {
         "WeChat",
         textAlign: TextAlign.center,
         style: TextStyle(
-          color: AppColors.weChatPrimaryText,
+          color: AppColors.primaryText,
           fontWeight: FontWeight.bold,
           fontSize: 34.sp
         ),
@@ -53,7 +53,7 @@ class SignInPage extends GetView<SignInController> {
             child: Text(
               'Sign in with $loginType',
               style: TextStyle(
-                  color: AppColors.weChatPrimaryText,
+                  color: AppColors.primaryText,
                   fontWeight: FontWeight.normal,
                   fontSize: 14.sp
               ),
@@ -110,7 +110,7 @@ class SignInPage extends GetView<SignInController> {
             child: Text(
               'Sign up here',
               style: TextStyle(
-                  color: AppColors.weChatPrimaryElement,
+                  color: AppColors.primaryElement,
                   fontWeight: FontWeight.normal,
                   fontSize: 12.sp
               ),

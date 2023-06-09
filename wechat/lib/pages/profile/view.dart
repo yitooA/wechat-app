@@ -1,8 +1,11 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:wechat/common/values/colors.dart';
 import 'package:wechat/pages/profile/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../common/routes/names.dart';
 
 
 class ProfilePage extends GetView<ProfileController> {
@@ -39,7 +42,26 @@ class ProfilePage extends GetView<ProfileController> {
               ),
             ]
           ),
-          child: Image(
+          child: controller.state.profileDetail.value.avatar!=null ?CachedNetworkImage(
+            imageUrl: controller.state.profileDetail.value.avatar!,
+            height: 120.w,
+            width: 120.w,
+            imageBuilder: (context, imageProvider) => Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(60.w)),
+                  image: DecorationImage(
+                      image: imageProvider,
+                      fit: BoxFit.fill
+                  )
+              ),
+            ),
+            errorWidget: (context, url, error) => const Image(
+              image: AssetImage(
+                  'assets/images/account_header.png'
+              ),
+            ),
+          ) :
+          Image(
             fit: BoxFit.cover,
             image: AssetImage("assets/images/account_header.png"),
           ),
@@ -99,6 +121,45 @@ class ProfilePage extends GetView<ProfileController> {
       ),
     );
   }
+
+  Widget _buildNearbyBtn() {
+    return GestureDetector(
+      onTap: () {
+        controller.findNearBy();
+      },
+      child: Container(
+        margin: EdgeInsets.only(top: 60.h, bottom: 30.h),
+        width: 295.w,
+        height: 44.h,
+        decoration: BoxDecoration(
+          color: AppColors.primaryElement,
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.1),
+              spreadRadius: 1,
+              blurRadius: 2,
+              offset: Offset(0, 1),
+            ),
+          ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "People Nearby",
+              style: TextStyle(
+                  color: AppColors.primaryElementText,
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.normal
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
 
   Widget _buildLogoutBtn() {
     return GestureDetector(
@@ -164,6 +225,7 @@ class ProfilePage extends GetView<ProfileController> {
                   children: [
                     _buildProfilePhoto(),
                     _buildCompleteBtn(),
+                    _buildNearbyBtn(),
                     _buildLogoutBtn(),
                   ],
                 ),

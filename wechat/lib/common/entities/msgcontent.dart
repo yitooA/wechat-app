@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Msgcontent {
   final String? token;
-  final String? content;
+  late String? content;
   final String? type;
   final Timestamp? addtime;
 
